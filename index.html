@@ -1,0 +1,169 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+        content="A responsive weather dashboard that displays real-time weather information for cities around the world.">
+
+    <meta name="author" content="Vasundhara V">
+
+    <title>Weather Dashboard | Vasundhara V</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header class="site-header">
+        <div class="container">
+            <h1>Weather Dashboard</h1>
+            <p>Check real-time weather information by city</p>
+        </div>
+    </header>
+
+    <main class="container">
+
+        <!-- Search Section -->
+        <section class="search-section" aria-labelledby="search-heading">
+
+            <h2 id="search-heading">Search Weather</h2>
+
+            <form id="weather-form">
+
+                <label for="city-input">Enter city name</label>
+
+                <div class="search-box">
+                    <input
+                        type="text"
+                        id="city-input"
+                        name="city"
+                        placeholder="e.g. Chennai"
+                        autocomplete="off"
+                        required
+                    >
+
+                    <button type="submit" id="search-button">
+                        Search
+                    </button>
+                </div>
+
+            </form>
+
+        </section>
+
+        <!-- Error Message -->
+        <div
+            id="error-message"
+            class="error-message"
+            role="alert"
+            aria-live="polite"
+            hidden
+        ></div>
+
+        <!-- Loading Message -->
+        <div
+            id="loading-message"
+            class="loading-message"
+            aria-live="polite"
+            hidden
+        >
+            Loading weather information...
+        </div>
+
+        <!-- Weather Dashboard -->
+        <section
+            id="weather-section"
+            class="weather-section"
+            aria-labelledby="weather-heading"
+            hidden
+        >
+
+            <div class="weather-header">
+                <h2 id="weather-heading">
+                    Weather Information
+                </h2>
+
+                <p id="location"></p>
+            </div>
+
+            <!-- Main Weather Information -->
+            <div class="weather-card">
+
+                <div class="weather-main">
+
+                    <div class="weather-icon" id="weather-icon" aria-hidden="true">
+                        🌤️
+                    </div>
+
+                    <div>
+                        <p class="weather-condition" id="weather-condition">
+                            Weather condition
+                        </p>
+
+                        <p class="temperature">
+                            <span id="temperature">--</span>°C
+                        </p>
+                    </div>
+
+                </div>
+
+                <!-- Weather Metrics -->
+                <div class="weather-details">
+
+                    <article class="weather-detail">
+
+                        <h3>Humidity</h3>
+
+                        <p>
+                            <span id="humidity">--</span>%
+                        </p>
+
+                    </article>
+
+                    <article class="weather-detail">
+
+                        <h3>Wind Speed</h3>
+
+                        <p>
+                            <span id="wind-speed">--</span> km/h
+                        </p>
+
+                    </article>
+
+                    <article class="weather-detail">
+
+                        <h3>Feels Like</h3>
+
+                        <p>
+                            <span id="feels-like">--</span>°C
+                        </p>
+
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <footer class="site-footer">
+
+        <div class="container">
+            <p>
+                &copy; 2026 Vasundhara V. Weather Dashboard.
+            </p>
+        </div>
+
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
+
